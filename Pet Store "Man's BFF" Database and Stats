@@ -1,0 +1,28 @@
+-- Create a pet store database
+
+CREATE TABLE 'mansbff' (id INTEGER PRIMARY KEY, name TEXT, aisle INTEGER, category TEXT, price INTEGER);
+
+INSERT INTO 'mansbff'VALUES (1, 'leash', 1, 'training', 10);
+INSERT INTO 'mansbff' VALUES (2, 'collar', 1, 'training', 8);
+INSERT INTO 'mansbff' VALUES (3, 'harness', 1, 'training', 12);
+INSERT INTO 'mansbff' VALUES (4, 'tufftoy', 2, 'toys', 7);
+INSERT INTO 'mansbff' VALUES (5, 'puzzletoy', 2, 'toys', 15);
+INSERT INTO 'mansbff' VALUES (6, 'squeakytoy', 2, 'toys', 5);
+INSERT INTO 'mansbff' VALUES (7, 'smalldogbed', 3, 'comfort', 30);
+INSERT INTO 'mansbff' VALUES (8, 'largedogbed', 3, 'comfort', 40);
+INSERT INTO 'mansbff' VALUES (9, 'crate', 1, 'training', 50);
+INSERT INTO 'mansbff' VALUES (10, 'playpen', 1, 'training', 35);
+INSERT INTO 'mansbff' VALUES (11, 'treats', 4, 'food', 12);
+INSERT INTO 'mansbff' VALUES (12, 'kibble', 4, 'food', 30);
+INSERT INTO 'mansbff' VALUES (13, 'nailclippers', 5, 'grooming', 5);
+INSERT INTO 'mansbff' VALUES (14, 'brush', 5, 'grooming', 7);
+INSERT INTO 'mansbff' VALUES (15, 'shampoo', 5, 'grooming', 10);
+
+- Display the database ordered by id
+SELECT * FROM mansbff;
+
+-Display the database ordered by price
+SELECT * FROM mansbff ORDER BY price;
+
+-How many items are in each category per aisle?
+SELECT aisle, COUNT(name) FROM mansbff GROUP BY category;
